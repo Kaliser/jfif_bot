@@ -3,8 +3,9 @@ A very small bot useful for converting your Twitter images (or other source of j
 
 ## Prerequisites
 
-- **Python 3.8** or higher installed on your system.
+- **Python 3.8** or higher
 - **Discord Bot Token** from the [Discord Developer Portal](https://discord.com/developers/applications).
+- **Enabled permissions** for your bot.
 
 ## Installation
 
@@ -19,7 +20,7 @@ A very small bot useful for converting your Twitter images (or other source of j
     pip install -r requirements.txt
     ```
 
-3. **Set up your environment variables**:
+3. **Make config file**:
     - Create a `config.ini` file in the root directory of the project.
     - Add your Discord Bot Token to the `config.ini` file:
         ```
@@ -34,5 +35,3 @@ A very small bot useful for converting your Twitter images (or other source of j
     ```sh
     python client.py
     ```
-
-## 

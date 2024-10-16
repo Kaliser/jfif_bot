@@ -41,19 +41,13 @@ async def on_message(message):
                             else:
                                 await print(f"Failed to download the image. Status code: {resp.status}")
                                 return
-
                     image = Image.open(BytesIO(data)).convert('RGB')
 
-                    # we need BytesIO object to send the image back
                     with BytesIO() as image_binary:
                         image.save(image_binary, format='JPEG')
                         image_binary.seek(0)
-
-                        # create a new filename with .jpg extension
                         new_filename = attachment.filename.rsplit('.', 1)[0] + '.jpg'
-
                         content = f'Converted .jfif posted by {message.author.name}'
-                        # send the converted image back to the channel
                         await message.channel.send(content=content, file=discord.File(fp=image_binary, filename=new_filename))
 
                             
